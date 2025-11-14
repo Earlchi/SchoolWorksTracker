@@ -1,3 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SchoolWorksTracker</string>
+
+    <!-- Priority options -->
+    <string-array name="priority_array">
+        <item>Low</item>
+        <item>Medium</item>
+        <item>High</item>
+    </string-array>
+
+    <!-- Intensity options -->
+    <string-array name="intensity_array">
+        <item>Light</item>
+        <item>Moderate</item>
+        <item>Hard</item>
+    </string-array>
 </resources>

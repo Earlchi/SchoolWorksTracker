@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- App title -->
+    <TextView
+        android:id="@+id/tvAppTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="School Task &amp; Exam Tracker"
+        android:textColor="#100B0B"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Task name -->
+    <EditText
+        android:id="@+id/etTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter task name"
+        android:layout_below="@id/tvAppTitle"
+        android:inputType="text" />
+
+    <!-- Date picker -->
+    <EditText
+        android:id="@+id/etDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select date"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_below="@id/etTask"
+        android:layout_marginTop="10dp" />
+
+    <!-- Priority spinner -->
+    <Spinner
+        android:id="@+id/spinnerPriority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etDate"
+        android:layout_marginTop="10dp" />
+
+    <!-- Intensity spinner -->
+    <Spinner
+        android:id="@+id/spinnerIntensity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinnerPriority"
+        android:layout_marginTop="10dp" />
+
+    <!-- Add task button -->
+    <Button
+        android:id="@+id/btnAddTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Task"
+        android:layout_below="@id/spinnerIntensity"
+        android:layout_marginTop="8dp" />
+
+    <!-- Clear completed tasks -->
+    <Button
+        android:id="@+id/btnClearCompleted"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Clear Completed Tasks"
+        android:backgroundTint="#D32F2F"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/btnAddTask"
+        android:layout_marginTop="8dp" />
+
+    <!-- Recycle Bin Floating Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabRecycleBin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="Recycle Bin"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp" />
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnClearCompleted"
+        android:layout_above="@id/fabRecycleBin"
+        android:layout_marginTop="16dp" />
+</RelativeLayout>

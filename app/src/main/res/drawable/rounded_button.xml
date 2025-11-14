@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Solid fill color (purple) -->
+    <solid android:color="#7E57C2" />
+
+    <!-- Rounded corners -->
+    <corners android:radius="50dp" />
+
+    <!-- Optional shadow/elevation tint -->
+    <stroke
+        android:width="1dp"
+        android:color="#6A4BA1" />
+
+    <!-- Internal padding for better text alignment -->
+    <padding
+        android:left="24dp"
+        android:top="12dp"
+        android:right="24dp"
+        android:bottom="12dp" />
+
+</shape>
